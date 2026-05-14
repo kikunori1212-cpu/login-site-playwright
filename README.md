@@ -19,6 +19,12 @@ npx.cmd playwright install chromium
 npm.cmd test
 ```
 
+ローカルの `../login-site` を起動して実行:
+
+```powershell
+$env:USE_LOCAL_SERVER="1"; npm.cmd test
+```
+
 ブラウザを表示して実行:
 
 ```powershell

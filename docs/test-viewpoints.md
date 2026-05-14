@@ -29,6 +29,12 @@ npm.cmd install
 npm.cmd test
 ```
 
+GitHub Pages の反映待ちや障害を切り分ける場合:
+
+```powershell
+$env:USE_LOCAL_SERVER="1"; npm.cmd test
+```
+
 ブラウザを表示して確認する場合:
 
 ```powershell

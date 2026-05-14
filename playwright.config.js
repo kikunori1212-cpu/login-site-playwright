@@ -1,7 +1,10 @@
 // @ts-check
 const { defineConfig, devices } = require("@playwright/test");
 
-const baseURL = process.env.BASE_URL || "https://kikunori1212-cpu.github.io/login-site/";
+const useLocalServer = process.env.USE_LOCAL_SERVER === "1";
+const baseURL = process.env.BASE_URL || (useLocalServer
+  ? undefined
+  : "https://kikunori1212-cpu.github.io/login-site/");
 
 module.exports = defineConfig({
   testDir: "./tests",
